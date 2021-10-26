@@ -3,9 +3,7 @@
 
 using namespace std;
 
-// j'avais envie de gagner en vitesse au niveau de la génération d'octets aléatoires dans un intervalle choisit
-
-
+// j'avais envie de gagner en vitesse au niveau de la génération d'octets aléatoires dans un intervalle choisit : 
 HCRYPTPROV prov;  // les descripteurs pour les CSP
 int rand32() {
 	if (prov == NULL)
@@ -20,15 +18,16 @@ int rand32() {
 
 
 int main() {
+	
 	SetConsoleTitleA("Matrix-Rainbow"); // le titre
 
 	HWND hwnd = GetConsoleWindow(); // le handle de la console
 	MoveWindow(hwnd, 20, 20, 800, 400, TRUE); // redimensionne la console
 	
 	while (true) {
+		
 		int c = rand32() % 999; // entiers aléatoires (1000 - 1)
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), rand32() % 15);
 		cout << " " << c;
-
 	}
 }
