@@ -26,7 +26,7 @@ int main() {
 	
 	while (true) {
 		
-		int c = rand32() % 999; // entiers aléatoires de (1000 - 1)
+		int c = rand32() % 999; // entiers aléatoires de 0 à (1000 - 1)
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), rand32() % 15);
 		cout << " " << c;
 	}
