@@ -11,7 +11,7 @@ int rand32() {
 			ExitProcess(1);
 
 	int sortie;
-    CryptGenRandom(prov, sizeof(sortie), (BYTE*)(&sortie)); // génère un buffer avec des octets aléatoires cryptographique
+    CryptGenRandom(prov, sizeof(sortie), (BYTE*)(&sortie)); // génère un buffer avec des octets aléatoires (cryptographiques)
 
 	return sortie & 0x7fffffff;
 }
